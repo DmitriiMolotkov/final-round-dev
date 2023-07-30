@@ -1,0 +1,210 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+*:focus {
+  outline: 2px solid transparent;
+}
+
+body {
+  overflow-anchor: none;
+  margin: 0;
+  font-family: "TT Lakes", sans-serif;
+  color: $main-text-color;
+  background-color: $background;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+input,
+textarea {
+  width: 100%;
+}
+
+textarea {
+  resize: none;
+}
+
+/*Меняем цвет плейсхолдера в инпуте Сафари и Хром*/
+/*Меняем цвет плейсхолдера в инпуте для Мозилы */
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder,
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+  color: $gray;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+}
+
+
+.is--hidden {
+  display: none !important;
+}
+
+.btn {
+  transition: transform 0.2s;
+  cursor: pointer;
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+
+.btn:active,
+.btn:focus {
+  outline: none;
+}
+
+.main {
+  @media (min-width: 1120px) {
+    margin-left: 306px;
+  }
+}
+
+.container {
+  max-width: 94%;
+  margin: 0 auto;
+
+  @media (min-width: 768px) {
+    min-width: 720px;
+  }
+}
+
+h2 {
+  border-top: 1px solid #d9fff5;
+  padding: 16px 4%;
+  background: linear-gradient(90deg, #f8f8f8 0%, #fff 100%);
+  color: $menu-text-color;
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: -0.2px;
+  text-transform: uppercase;
+}
+
+.swiper {
+  margin: 0 20px;
+  padding-top: 24px;
+  padding-bottom: 66px;
+  @media (min-width: 768px) {
+    margin: 0;
+    padding-bottom: 20px;
+  }
+}
+
+.swiper-slide {
+  box-sizing: border-box;
+  padding: 16px;
+  border-radius: 6px;
+  border: 1px solid #eaeaea;
+  background: $white;
+}
+
+.swiper-pagination {
+  padding-bottom: 25px;
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+
+.swiper-pagination .swiper-pagination-bullet {
+  background-color: #b5b6bc;
+}
+
+.click {
+  display: none;
+  font-weight: 500;
+  font-size: 16px;
+  @media (min-width: 768px) {
+    display: block;
+    padding-bottom: 34px;
+  }
+  &_show {
+    cursor: pointer;
+  }
+  &_show::before {
+    content: url(../img/icons/expand.svg);
+    position: relative;
+    top: 8px;
+    margin-right: 7px;
+  }
+  &_hide {
+    cursor: pointer;
+  }
+  &_hide::before {
+    content: url(../img/icons/expandup.svg);
+    position: relative;
+    top: 8px;
+    margin-right: 7px;
+  }
+}
+
+.price {
+  &__servic::before {
+    content: "Ремонтные услуги";
+    display: block;
+    color: $menu-text-color;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+    @media (min-width: 768px) {
+      content: "";
+    }
+  }
+  &__cost::before {
+    content: "Цена";
+    display: block;
+    color: $menu-text-color;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+    @media (min-width: 768px) {
+      content: "";
+    }
+  }
+  &__time::before {
+    content: "Срок";
+    display: block;
+    color: $menu-text-color;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+    @media (min-width: 768px) {
+      content: "";
+    }
+  }
+}

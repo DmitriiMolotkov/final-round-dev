@@ -1,0 +1,94 @@
+.price {
+    &__swiper {
+      padding-top: 0;
+    }
+    &__head {
+      color: $menu-text-color;
+      font-size: 14px;
+      font-weight: 500;
+      opacity: 0.7218424677848816;
+      display: none;
+      @media (min-width: 768px) {
+        display: grid;
+        grid-template-columns: minmax(372px, auto) minmax(96px, auto) minmax(
+            220px,
+            auto
+          );
+        justify-content: space-between;
+        align-items: center;
+        padding: 16px;
+      }
+      // @media (min-width: 1120px) {
+      //   grid-template-columns: 470px 227px 317px;
+      // }
+    }
+    &__wrapper {
+      @media (min-width: 768px) {
+        border-radius: 6px;
+        display: flex;
+        flex-direction: column;
+        background-color: $white;
+      }
+    }
+    &__slide {
+      height: 200px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      color: $main-text-color;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 18px;
+      letter-spacing: 0.2px;
+      @media (min-width: 768px) {
+        width: auto;
+        margin: 0 16px;
+        height: 64px;
+        padding: 0;
+        display: grid;
+        grid-template-columns: minmax(372px, auto) minmax(96px, auto) minmax(
+            220px,
+            auto
+          );
+        border: none;
+        align-items: center;
+        border-radius: 0%;
+        border-bottom: 1px solid #eaeaea;
+        &:last-child {
+          border-bottom: none;
+        }
+        // @media (min-width: 1120px) {
+        //   grid-template-columns: 470px 227px 317px;
+        // }
+      }
+    }
+    &__foot-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      @media (min-width: 768px) {
+        align-items: center;
+      }
+    }
+    &__text {
+      color: $main-text-color;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 20px;
+      letter-spacing: 0.2px;
+      padding-bottom: 20px;
+    }
+    &__link {
+      color: $main-text-color;
+      font-size: 16px;
+      font-weight: 500;
+      letter-spacing: -0.2px;
+      display: flex;
+      line-height: 10px;
+      padding-bottom: 40px;
+      img {
+        position: relative;
+        top: 9px;
+      }
+    }
+  }

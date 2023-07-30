@@ -1,0 +1,21 @@
+.brands {
+    &__wrapper {
+      @media (min-width: 768px) {
+        width: 100%;
+        display: grid;
+        justify-content: center;
+        grid-template-columns: repeat(auto-fit, 224px);
+        gap: 16px 23px;
+      }
+      @media (min-width: 1120px) {
+        grid-template-columns: repeat(auto-fit, 240px);
+      }
+    }
+    &__slide {
+      height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
